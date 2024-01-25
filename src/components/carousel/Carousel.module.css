@@ -1,7 +1,19 @@
+.containerGeneralCarousel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .containerCarousel{
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
+}
+
+.title{
+    color: #01be96;
+    font-size: 30px;
 }
 
 .imgMain{

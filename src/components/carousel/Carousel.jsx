@@ -9,6 +9,7 @@ import flechaDer from '../../assets/icons/flechaDer.png'
 export default function Carousel() {
   
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -22,18 +23,31 @@ export default function Carousel() {
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
+      if (!isHovered) {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000);
+      }
+    }, 2000);
     return () => clearTimeout(timeoutId);
-  }, [currentIndex]); 
+  }, [currentIndex, isHovered]); 
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   return (
-    <div className={styled.containerCarousel}>
-      <button className={styled.bottonPrev} onClick={prevImage}><img src={flechaIzq} alt="" /></button>
-        <img className={styled.imgSide} src={images[currentIndex <= 0 ? images.length - 1 : currentIndex - 1]} alt={`Imagen ${currentIndex + 1}`} />
-        <img className={styled.imgMain} src={images[currentIndex]} alt={`Imagen ${currentIndex + 1}`} />
-        <img className={styled.imgSide} src={images[currentIndex < images.length ? currentIndex + 1 : 0]} alt={`Imagen ${currentIndex + 1}`} />
-      <button className={styled.bottonNext} onClick={nextImage}><img src={flechaDer} alt="" /></button>
+    <div className={styled.containerGeneralCarousel}>
+        <h3 className={styled.title}>Carrusel</h3>
+        <div className={styled.containerCarousel} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <button className={styled.bottonPrev} onClick={prevImage}><img src={flechaIzq} alt="" /></button>
+            <img className={styled.imgSide} src={images[currentIndex <= 0 ? images.length - 1 : currentIndex - 1]} alt={`Imagen ${currentIndex + 1}`} />
+            <img className={styled.imgMain} src={images[currentIndex]} alt={`Imagen ${currentIndex + 1}`} />
+            <img className={styled.imgSide} src={images[currentIndex < images.length ? currentIndex + 1 : 0]} alt={`Imagen ${currentIndex + 1}`} />
+          <button className={styled.bottonNext} onClick={nextImage}><img src={flechaDer} alt="" /></button>
+        </div>
     </div>
-  );
+    );
 };

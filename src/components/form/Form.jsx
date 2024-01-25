@@ -42,7 +42,7 @@ export default function Form(){
 
   return(
     <div className={styled.containerGeneral}>
-      <h3 className={styled.title}>CARGA TU PDF</h3>
+      <h3 className={styled.title}>Formulario carga de PDF</h3>
       <form className={styled.form}>
         <div className={styled.containerInput}>
           <label htmlFor="" className={styled.label}>Titulo</label>
@@ -51,11 +51,11 @@ export default function Form(){
         </div>
         <div className={styled.containerInput}>
           <label htmlFor="" className={styled.label}>Archivo</label>
-          <input className={styled.input} type="file" name="file" accept=".pdf" onChange={handleFileSelect}/>
+          <input type="file" name="file" accept=".pdf" onChange={handleFileSelect}/>
           <p className={styled.errors}>{errors.file}</p>
         </div>
         <div className={styled.containerButton}>
-          <button className={styled.button} onClick={handleFileUpload}>CARGAR PDF</button>
+          <button className={styled.button} onClick={handleFileUpload}>Cargar PDF</button>
         </div>
       </form>
     </div>

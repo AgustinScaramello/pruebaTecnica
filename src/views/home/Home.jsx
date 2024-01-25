@@ -8,7 +8,7 @@ export default function Home(){
     return(
         <div className={styled.containerHome}>
             <div className={styled.bar}>
-                <h1 className={styled.titulo}>Prueba Tecnica - Front End - Grupo Penna</h1>
+                <h1 className={styled.titulo}>Prueba tecnica Frontend | Grupo Penna | Agustin Scaramello</h1>
             </div>
             <Carousel/>
             <Files/>
