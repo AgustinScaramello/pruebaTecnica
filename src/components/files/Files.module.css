@@ -1,0 +1,17 @@
+.containerFiles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    color: #f0f0d8;
+    font-size: 30px;
+}
+
+.files{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0%;
+    padding: 0%;
+}

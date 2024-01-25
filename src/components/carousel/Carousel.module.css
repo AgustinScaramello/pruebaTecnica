@@ -1,0 +1,27 @@
+.containerCarousel{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.imgMain{
+    height: 500px;
+    width: 48vw;
+}
+
+.imgSide{
+    height: 450px;
+    width: 22vw;
+}
+
+.bottonPrev{
+    display: flex;
+    position: absolute;
+    margin-left: 0;
+}
+
+.bottonNext{
+    display: flex;
+    position: absolute;
+    margin-left: 87.5vw;
+}
