@@ -1,17 +1,21 @@
-.containerFiles{
+.containerGeneralFiles{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+
+.containerFiles{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 30px;
+    justify-content: space-evenly;
+    width: 100%;
+
 }
 
 .title{
     color: #f0f0d8;
     font-size: 30px;
-}
-
-.files{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0%;
-    padding: 0%;
 }

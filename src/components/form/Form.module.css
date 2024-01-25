@@ -52,13 +52,6 @@
     -moz-transform: scale(1.03) ;
 }
 
-.errors{
-    margin: 0;
-    font-size: 13px;
-    color: coral;
-    text-shadow: 2px 2px 2px black;
-}
-
 .containerButton{
     margin-top: 20px;
     display: flex;
@@ -83,4 +76,10 @@
     transform: scale(1.1) ;
     -webkit-transform: scale(1.1) ;
     -moz-transform: scale(1.1) ;
+}
+
+.errors{
+    margin: 0;
+    font-size: 13px;
+    color: #666666;
 }

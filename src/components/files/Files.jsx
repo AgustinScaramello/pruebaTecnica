@@ -15,9 +15,9 @@ export default function Files(){
       }, );
 
     return(
-      <div className={styled.containerFiles}>
-        <h3 className={styled.title}>CARGA TU PDF</h3>
-        <div className={styled.files}>
+      <div className={styled.containerGeneralFiles}>
+        <h3 className={styled.title}>PDFs Cargados</h3>
+        <div className={styled.containerFiles}>
           {allFiles.length > 0 ? allFiles.map(({titulo, id, path})=> {
             return <Card key={id} titulo={titulo} pdf={path}/>
           }): <h4>No hay archivos cargados</h4>}

@@ -12,16 +12,25 @@
 .imgSide{
     height: 450px;
     width: 22vw;
+    filter: brightness(30%);
 }
 
 .bottonPrev{
     display: flex;
     position: absolute;
     margin-left: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .bottonNext{
     display: flex;
     position: absolute;
-    margin-left: 87.5vw;
+    margin-left: 83vw;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    z-index: 2;
 }
