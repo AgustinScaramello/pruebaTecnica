@@ -42,11 +42,11 @@ export default function Carousel() {
     <div className={styled.containerGeneralCarousel}>
         <h3 className={styled.title}>Carrusel</h3>
         <div className={styled.containerCarousel} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <button className={styled.bottonPrev} onClick={prevImage}><img src={flechaIzq} alt="" /></button>
+          <button className={styled.buttonPrev} onClick={prevImage}><img src={flechaIzq} alt="" /></button>
             <img className={styled.imgSide} src={images[currentIndex <= 0 ? images.length - 1 : currentIndex - 1]} alt={`Imagen ${currentIndex + 1}`} />
             <img className={styled.imgMain} src={images[currentIndex]} alt={`Imagen ${currentIndex + 1}`} />
-            <img className={styled.imgSide} src={images[currentIndex < images.length ? currentIndex + 1 : 0]} alt={`Imagen ${currentIndex + 1}`} />
-          <button className={styled.bottonNext} onClick={nextImage}><img src={flechaDer} alt="" /></button>
+            <img className={styled.imgSide} src={images[currentIndex >= images.length ? 0 : currentIndex + 1]} alt={`Imagen ${currentIndex + 1}`} />
+          <button className={styled.buttonNext} onClick={nextImage}><img src={flechaDer} alt="" /></button>
         </div>
     </div>
     );
